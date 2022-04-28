@@ -1,0 +1,41 @@
+#intro {
+   padding-left: calc((100% - $cont-width) / 2);
+   @include flex(space-between);
+   margin-bottom: 20rem;
+   .btn {
+      padding: 0.625rem 1.8125rem;
+   }
+
+   .intro__desc {
+      width: 42%;
+      padding-top: $intro-padding;
+
+      h1 {
+         font-size: 4.5rem;
+         line-height: 5rem;
+         font-weight: 700;
+         color: $very-dark-blue;
+      }
+
+      p {
+         font-size: 1.125rem;
+         letter-spacing: 1px;
+         color: $grayish-violet;
+         line-height: 1.75rem;
+         margin-bottom: 1.5625rem;
+      }
+   }
+
+   .intro__img {
+      width: 55%;
+      position: relative;
+      padding-bottom: calc($intro-padding * 4.5);
+      img {
+         position: absolute;
+         top: 0;
+         left: 80px;
+         height: auto;
+         width: 100%;
+      }
+   }
+}

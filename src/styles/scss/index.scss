@@ -1,5 +1,11 @@
 @use '../abstracts/' as *;
 @import '../../components/Header/header';
+@import '../../components/Intro/intro';
+@import '../../components/Statistics/statistics';
+@import '../../components/LinkForm/linkform';
+@import '../../components/Links/links';
+@import '../../components/Boost/boost';
+@import '../../components/Footer/footer';
 
 *,
 *::before,
@@ -14,26 +20,35 @@
    list-style: none;
    color: black;
    font-family: 'Poppins', sans-serif;
+   font-size: 1rem;
 }
 
 body {
    font-family: 'Poppins', sans-serif;
+   overflow-x: hidden;
+}
+
+#root {
+   overflow-x: hidden;
 }
 
 .container {
-   width: 80%;
+   width: $cont-width;
    margin: 0 auto;
    height: 100%;
 }
 
 .btn {
+   display: inline-block;
    color: white;
    background-color: $cyan;
    padding: 0.4375rem 1.25rem;
    border-radius: 1.5625rem;
    cursor: pointer;
-   transition: $trans-dur filter ease-in-out;
+   transition: $trans-dur all ease-in-out;
+   transition-property: filter, transform;
    &:hover {
       filter: brightness(1.05);
+      transform: scale(1.05);
    }
 }

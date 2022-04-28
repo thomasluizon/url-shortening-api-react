@@ -1,0 +1,23 @@
+#statistics .container .statistics__form form {
+   background-color: $dark-violet;
+   background-image: url(../../assets/imgs/bg-boost-desktop.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   position: relative;
+   bottom: 58px;
+   width: $link-width;
+   margin: 0 auto;
+   padding: 2.1875rem;
+   border-radius: 0.25rem;
+   @include flex(space-between);
+
+   input {
+      width: 82%;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+   }
+
+   .btn {
+      border-radius: 6px;
+   }
+}

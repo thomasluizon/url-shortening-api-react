@@ -1,0 +1,59 @@
+#footer {
+   background: $very-dark-violet;
+   padding: 2.5rem 0;
+
+   .container {
+      @include flex(space-between);
+      align-items: flex-start;
+
+      .footer__logo {
+         height: 33px;
+         svg {
+            fill: white;
+         }
+      }
+
+      .footer__lists {
+         width: 40%;
+         @include flex(space-between);
+         align-items: flex-start;
+
+         h3,
+         a {
+            color: white;
+            font-size: 15.5px;
+         }
+
+         a {
+            transition: $trans-dur color ease-in-out;
+
+            &:hover {
+               color: $cyan;
+            }
+         }
+
+         h3 {
+            margin-bottom: 15px;
+            font-weight: bold;
+         }
+
+         li {
+            margin-bottom: 5px;
+         }
+      }
+
+      .footer__socials {
+         display: flex;
+         gap: 2rem;
+
+         img {
+            cursor: pointer;
+            transition: $trans-dur transform ease-in-out;
+
+            &:hover {
+               transform: scale(1.05);
+            }
+         }
+      }
+   }
+}

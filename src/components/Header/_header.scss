@@ -1,5 +1,6 @@
-.header {
+#header {
    padding: 1rem 0;
+   margin-bottom: 2.5rem;
 
    .container {
       @include flex(space-between);
@@ -9,6 +10,13 @@
          transition: $trans-dur color ease-in-out;
          &:hover {
             color: $very-dark-violet;
+         }
+      }
+
+      .header__logo {
+         height: 33px;
+         svg {
+            fill: black;
          }
       }
 

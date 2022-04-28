@@ -1,0 +1,29 @@
+#statistics .container .statistics__form .links {
+   @include flexcol;
+   width: $link-width;
+   margin: 0 auto;
+   margin-top: -2.3rem;
+   gap: 2rem;
+
+   .links__link {
+      @include flex(space-between);
+      width: 100%;
+      background: white;
+      padding: 1rem;
+      border-radius: 0.25rem;
+
+      .link__short-wrapper {
+         @include flex(center);
+         gap: 1rem;
+
+         p {
+            color: $cyan;
+         }
+
+         .btn {
+            border-radius: 6px;
+            font-size: 15.5px;
+         }
+      }
+   }
+}
