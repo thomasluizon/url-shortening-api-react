@@ -1,6 +1,5 @@
 #statistics {
    background: $background-gray;
-
    padding-bottom: 11.25rem;
 
    .container {
@@ -29,6 +28,7 @@
          position: relative;
          @include flex(space-between);
          margin-top: 5.3125rem;
+         gap: 1rem;
 
          &::after {
             content: '';
@@ -78,6 +78,28 @@
          .card.third {
             position: relative;
             top: 90px;
+         }
+      }
+
+      @media screen and (max-width: 867px) {
+         .statistics__cards {
+            flex-direction: column;
+            gap: 3rem;
+
+            .card {
+               width: 20.3125rem;
+            }
+
+            &::after {
+               width: 10px;
+               height: 100%;
+               top: 0;
+               left: 50%;
+            }
+
+            .card__img {
+               left: 38%;
+            }
          }
       }
    }

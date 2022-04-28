@@ -17,6 +17,7 @@
          width: 40%;
          @include flex(space-between);
          align-items: flex-start;
+         gap: 2rem;
 
          h3,
          a {
@@ -53,6 +54,19 @@
             &:hover {
                transform: scale(1.05);
             }
+         }
+      }
+
+      @media screen and (max-width: 867px) {
+         flex-direction: column;
+         align-items: center;
+         gap: 2.5rem;
+
+         .footer__lists {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
          }
       }
    }

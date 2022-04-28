@@ -5,19 +5,34 @@
    background-position: center;
    position: relative;
    bottom: 58px;
-   width: $link-width;
+   max-width: $link-width;
    margin: 0 auto;
    padding: 2.1875rem;
-   border-radius: 0.25rem;
+   border-radius: 0.5rem;
    @include flex(space-between);
+   gap: 1rem;
 
    input {
-      width: 82%;
+      width: 80%;
       padding: 0.5rem;
       border-radius: 0.25rem;
    }
 
    .btn {
       border-radius: 6px;
+      font-size: 15px;
+      padding: 0.5rem 1rem;
+   }
+
+   @media screen and (max-width: 867px) {
+      flex-direction: column;
+
+      .btn {
+         width: 100%;
+      }
+
+      input {
+         width: 100%;
+      }
    }
 }

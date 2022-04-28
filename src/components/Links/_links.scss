@@ -1,6 +1,6 @@
 #statistics .container .statistics__form .links {
    @include flexcol;
-   width: $link-width;
+   max-width: $link-width;
    margin: 0 auto;
    margin-top: -2.3rem;
    gap: 2rem;
