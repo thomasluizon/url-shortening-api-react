@@ -1,3 +1,37 @@
+.header {
+  padding: 1rem 0;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .container a {
+  color: hsl(257deg, 7%, 63%);
+  transition: 0.2s color ease-in-out;
+}
+.header .container a:hover {
+  color: hsl(260deg, 8%, 14%);
+}
+.header .container .header__nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header .container .header__nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.header .container .header__login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 *,
 *::before,
 *::after {
@@ -6,12 +40,31 @@
   padding: 0;
   border: none;
   outline: none;
-  font-size: 18px;
   font-weight: 500;
   text-decoration: none;
   list-style: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.btn {
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  padding: 0.4375rem 1.25rem;
+  border-radius: 1.5625rem;
+  cursor: pointer;
+  transition: 0.2s filter ease-in-out;
+}
+.btn:hover {
+  filter: brightness(1.05);
 }/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,30 @@
+.header {
+   padding: 1rem 0;
+
+   .container {
+      @include flex(space-between);
+
+      a {
+         color: $grayish-violet;
+         transition: $trans-dur color ease-in-out;
+         &:hover {
+            color: $very-dark-violet;
+         }
+      }
+
+      .header__nav-wrapper {
+         @include flex(center);
+         gap: 2rem;
+      }
+
+      .header__nav ul {
+         @include flex(center);
+         gap: 1.5rem;
+      }
+
+      .header__login-wrapper {
+         @include flex(center);
+         gap: 1rem;
+      }
+   }
+}
