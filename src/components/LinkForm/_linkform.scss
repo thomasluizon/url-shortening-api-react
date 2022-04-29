@@ -1,38 +1,57 @@
-#statistics .container .statistics__form form {
-   background-color: $dark-violet;
-   background-image: url(../../assets/imgs/bg-boost-desktop.svg);
-   background-repeat: no-repeat;
-   background-position: center;
-   position: relative;
-   bottom: 58px;
-   max-width: $link-width;
-   margin: 0 auto;
-   padding: 2.1875rem;
-   border-radius: 0.5rem;
-   @include flex(space-between);
-   gap: 1rem;
-
-   input {
-      width: 80%;
-      padding: 0.5rem;
-      border-radius: 0.25rem;
+#statistics .container .statistics__form {
+   .error-text {
+      position: absolute;
+      font-style: italic;
+      font-size: 14px;
+      color: red;
+      bottom: 0.5rem;
+      left: 2rem;
    }
 
-   .btn {
-      border-radius: 6px;
-      font-size: 15px;
-      padding: 0.5rem 1rem;
-   }
+   form {
+      background-color: $dark-violet;
+      background-image: url(../../assets/imgs/bg-boost-desktop.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      bottom: 58px;
+      max-width: $link-width;
+      margin: 0 auto;
+      padding: 2.1875rem;
+      border-radius: 0.5rem;
+      @include flex(space-between);
+      gap: 1rem;
 
-   @media screen and (max-width: 867px) {
-      flex-direction: column;
+      .error {
+         &::placeholder {
+            color: red;
+         }
 
-      .btn {
-         width: 100%;
+         outline: 1.5px solid red;
       }
 
       input {
-         width: 100%;
+         width: 80%;
+         padding: 0.5rem;
+         border-radius: 0.25rem;
+      }
+
+      .btn {
+         border-radius: 6px;
+         font-size: 15px;
+         padding: 0.5rem 1rem;
+      }
+
+      @media screen and (max-width: 867px) {
+         flex-direction: column;
+
+         .btn {
+            width: 100%;
+         }
+
+         input {
+            width: 100%;
+         }
       }
    }
 }

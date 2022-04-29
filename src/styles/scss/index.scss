@@ -29,7 +29,7 @@ body {
 }
 
 #root {
-   overflow-x: hidden;
+   overflow: hidden;
 }
 
 .container {
@@ -51,4 +51,17 @@ body {
       filter: brightness(1.05);
       transform: scale(1.05);
    }
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+::-webkit-scrollbar-track {
+   border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: $cyan;
+   border-radius: 30px;
 }

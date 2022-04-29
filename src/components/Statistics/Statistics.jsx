@@ -7,14 +7,16 @@ const Statistics = () => {
             <LinkForm />
             <div className="statistics__wrapper">
                <div className="statistics__desc">
-                  <h2>Advanced Statistics</h2>
-                  <p>
+                  <h2 data-aos="fade-up" data-aos-delay="100">
+                     Advanced Statistics
+                  </h2>
+                  <p data-aos="fade-up" data-aos-delay="200">
                      Track how your links are performing across the web with our
                      advanced statistics dashboard.
                   </p>
                </div>
                <div className="statistics__cards">
-                  <div className="card">
+                  <div className="card" data-aos="fade-up">
                      <div className="card__img">
                         <img
                            src="src/assets/imgs/icon-brand-recognition.svg"
@@ -28,7 +30,11 @@ const Statistics = () => {
                         confidence in your content.
                      </p>
                   </div>
-                  <div className="card second">
+                  <div
+                     className="card second"
+                     data-aos="fade-up"
+                     data-aos-delay="50"
+                  >
                      <div className="card__img">
                         <img
                            src="src/assets/imgs/icon-detailed-records.svg"
@@ -42,7 +48,11 @@ const Statistics = () => {
                         inform better decisions.
                      </p>
                   </div>
-                  <div className="card third">
+                  <div
+                     className="card third"
+                     data-aos="fade-up"
+                     data-aos-delay="100"
+                  >
                      <div className="card__img">
                         <img
                            src="src/assets/imgs/icon-fully-customizable.svg"

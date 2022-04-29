@@ -330,6 +330,14 @@
   }
 }
 
+#statistics .container .statistics__form .error-text {
+  position: absolute;
+  font-style: italic;
+  font-size: 14px;
+  color: red;
+  bottom: 0.5rem;
+  left: 2rem;
+}
 #statistics .container .statistics__form form {
   background-color: hsl(257deg, 27%, 26%);
   background-image: url(../../assets/imgs/bg-boost-desktop.svg);
@@ -345,6 +353,18 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+#statistics .container .statistics__form form .error {
+  outline: 1.5px solid red;
+}
+#statistics .container .statistics__form form .error::-moz-placeholder {
+  color: red;
+}
+#statistics .container .statistics__form form .error:-ms-input-placeholder {
+  color: red;
+}
+#statistics .container .statistics__form form .error::placeholder {
+  color: red;
 }
 #statistics .container .statistics__form form input {
   width: 80%;
@@ -523,7 +543,7 @@ body {
 }
 
 #root {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -545,4 +565,17 @@ body {
 .btn:hover {
   filter: brightness(1.05);
   transform: scale(1.05);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(180deg, 66%, 49%);
+  border-radius: 30px;
 }/*# sourceMappingURL=index.css.map */
