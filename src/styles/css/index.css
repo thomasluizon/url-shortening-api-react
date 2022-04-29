@@ -567,6 +567,11 @@ body {
   transform: scale(1.05);
 }
 
+.btn.disabled {
+  background: hsl(257deg, 7%, 63%);
+  pointer-events: none;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

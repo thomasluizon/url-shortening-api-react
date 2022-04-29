@@ -7,6 +7,7 @@ const LinkForm = () => {
    const [links, setLinks] = useState(
       JSON.parse(localStorage.getItem('links')) || []
    );
+   const [loading, setLoading] = useState(false);
 
    const handleSubmit = e => {
       e.preventDefault();
@@ -24,19 +25,28 @@ const LinkForm = () => {
          await fetch(`https://api.shrtco.de/v2/shorten?url=${inputValue}`)
             .then(res => res.json())
             .then(res => {
-               const shortLink = res.result.short_link;
                const longLink = inputValue;
-               const linkObject = {
-                  id: links.length + 1,
-                  shortLink,
-                  longLink,
-               };
-
-               setLinks(prevState => [linkObject, ...prevState]);
                setInputValue('');
+               const hasLink = links.some(link => link.longLink == longLink);
+               if (!hasLink) {
+                  setLoading(true);
+
+                  const shortLink = res.result.short_link;
+                  const linkObject = {
+                     id: links.length + 1,
+                     shortLink,
+                     longLink,
+                  };
+
+                  setLinks(prevState => [linkObject, ...prevState]);
+                  setLoading(false);
+               } else {
+                  alert('Link has already been shortened!');
+               }
             });
       } catch (e) {
-         alert('Invalid link');
+         setLoading(false);
+         alert('Invalid link or not allowed');
       }
    }
 
@@ -54,7 +64,9 @@ const LinkForm = () => {
                placeholder="Shorten a link here..."
                className={formError ? 'error' : ''}
             />
-            <button className="btn">Shorten it!</button>
+            <button className={`btn ${loading ? 'disabled' : ''}`}>
+               {loading ? 'loading...' : 'Shorten it!'}
+            </button>
             {formError && <p className="error-text">Please add a link</p>}
          </form>
          <Links links={links} />

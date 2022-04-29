@@ -53,6 +53,11 @@ body {
    }
 }
 
+.btn.disabled {
+   background: $grayish-violet;
+   pointer-events: none;
+}
+
 ::-webkit-scrollbar {
    width: 10px;
 }
