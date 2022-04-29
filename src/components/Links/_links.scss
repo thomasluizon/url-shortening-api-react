@@ -25,5 +25,22 @@
             font-size: 15.5px;
          }
       }
+
+      @media screen and (max-width: 768px) {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 1rem;
+
+         .link__short-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            padding-top: 1rem;
+            border-top: 1px solid $grayish-violet;
+            .btn {
+               width: 100%;
+            }
+         }
+      }
    }
 }

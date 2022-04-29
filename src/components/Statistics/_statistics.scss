@@ -12,15 +12,31 @@
          width: 44%;
          margin: 0 auto;
 
+         @media screen and (max-width: 425px) {
+            width: 65%;
+         }
+
          h2 {
             font-size: 1.8rem;
             color: $very-dark-violet;
             margin-bottom: 7px;
             font-weight: 700;
+
+            @media screen and (max-width: 425px) {
+               font-size: 1.5rem;
+            }
+
+            @media screen and (max-width: 355px) {
+               font-size: 1.25rem;
+            }
          }
 
          p {
             color: $grayish-violet;
+
+            @media screen and (max-width: 425px) {
+               font-size: 0.8rem;
+            }
          }
       }
 
@@ -100,6 +116,12 @@
             .card__img {
                left: 38%;
             }
+         }
+      }
+
+      @media screen and (max-width: 355px) {
+         .statistics__cards .card {
+            width: 18rem;
          }
       }
    }

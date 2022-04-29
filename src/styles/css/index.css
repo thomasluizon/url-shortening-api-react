@@ -38,6 +38,69 @@
   justify-content: center;
   gap: 1rem;
 }
+#header .container .header__mobile-nav-wrapper {
+  display: none;
+}
+@media screen and (max-width: 867px) {
+  #header .container .header__nav,
+#header .container .header__login-wrapper {
+    display: none;
+  }
+}
+#header .container .burger {
+  display: none;
+  cursor: pointer;
+}
+#header .container .burger div {
+  height: 4px;
+  margin: 3px;
+  width: 25px;
+  border-radius: 4px;
+  background: hsl(257deg, 7%, 63%);
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 867px) {
+  #header .container .burger {
+    display: block;
+  }
+}
+@media screen and (max-width: 867px) {
+  #header .container .header__mobile-nav-wrapper {
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    display: block;
+    position: absolute;
+    padding: 2rem;
+    border-radius: 10px;
+    top: 100px;
+    background: hsl(257deg, 27%, 26%);
+    width: 80%;
+  }
+  #header .container .header__mobile-nav-wrapper .header__mobile-nav {
+    border-bottom: 1px solid hsl(257deg, 7%, 63%);
+    padding-bottom: 1.5rem;
+  }
+  #header .container .header__mobile-nav-wrapper .header__mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  #header .container .header__mobile-nav-wrapper a {
+    color: white;
+  }
+  #header .container .header__mobile-nav-wrapper a:hover {
+    color: hsl(180deg, 66%, 49%);
+  }
+  #header .container .header__mobile-nav-wrapper .header__mobile-login {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
 
 #intro {
   padding-left: 10%;
@@ -73,6 +136,28 @@
 @media screen and (max-width: 1123px) {
   #intro .intro__desc h1 {
     font-size: 4rem;
+  }
+}
+@media screen and (max-width: 754px) {
+  #intro .intro__desc h1 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  #intro .intro__desc h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 558px) {
+  #intro .intro__desc h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 355px) {
+  #intro .intro__desc h1 {
+    font-size: 1.75rem;
   }
 }
 #intro .intro__desc p {
@@ -139,14 +224,34 @@
   width: 44%;
   margin: 0 auto;
 }
+@media screen and (max-width: 425px) {
+  #statistics .container .statistics__desc {
+    width: 65%;
+  }
+}
 #statistics .container .statistics__desc h2 {
   font-size: 1.8rem;
   color: hsl(260deg, 8%, 14%);
   margin-bottom: 7px;
   font-weight: 700;
 }
+@media screen and (max-width: 425px) {
+  #statistics .container .statistics__desc h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 355px) {
+  #statistics .container .statistics__desc h2 {
+    font-size: 1.25rem;
+  }
+}
 #statistics .container .statistics__desc p {
   color: hsl(257deg, 7%, 63%);
+}
+@media screen and (max-width: 425px) {
+  #statistics .container .statistics__desc p {
+    font-size: 0.8rem;
+  }
 }
 #statistics .container .statistics__cards {
   position: relative;
@@ -219,6 +324,11 @@
     left: 38%;
   }
 }
+@media screen and (max-width: 355px) {
+  #statistics .container .statistics__cards .card {
+    width: 18rem;
+  }
+}
 
 #statistics .container .statistics__form form {
   background-color: hsl(257deg, 27%, 26%);
@@ -287,6 +397,23 @@
 #statistics .container .statistics__form .links .links__link .link__short-wrapper .btn {
   border-radius: 6px;
   font-size: 15.5px;
+}
+@media screen and (max-width: 768px) {
+  #statistics .container .statistics__form .links .links__link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #statistics .container .statistics__form .links .links__link .link__short-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid hsl(257deg, 7%, 63%);
+  }
+  #statistics .container .statistics__form .links .links__link .link__short-wrapper .btn {
+    width: 100%;
+  }
 }
 
 #boost {

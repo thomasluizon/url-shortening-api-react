@@ -1,4 +1,44 @@
+import { useState } from 'react';
+
 const Header = () => {
+   const [mobile, setMobile] = useState(false);
+
+   const Burger = () => {
+      return (
+         <div className="burger" onClick={() => setMobile(!mobile)}>
+            <div className="burger1"></div>
+            <div className="burger2"></div>
+            <div className="burger3"></div>
+         </div>
+      );
+   };
+
+   const MobileNav = () => {
+      return (
+         <div className="header__mobile-nav-wrapper">
+            <nav className="header__mobile-nav">
+               <ul>
+                  <li>
+                     <a href="#">Features</a>
+                  </li>
+                  <li>
+                     <a href="#">Pricing</a>
+                  </li>
+                  <li>
+                     <a href="#">Resources</a>
+                  </li>
+               </ul>
+            </nav>
+            <div className="header__mobile-login">
+               <a href="#">Login</a>
+               <button className="btn" href="#">
+                  Sign Up
+               </button>
+            </div>
+         </div>
+      );
+   };
+
    return (
       <header id="header">
          <div className="container">
@@ -32,6 +72,8 @@ const Header = () => {
                   Sign Up
                </button>
             </div>
+            <Burger />
+            {mobile && <MobileNav />}
          </div>
       </header>
    );

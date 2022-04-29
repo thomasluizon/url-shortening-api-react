@@ -29,6 +29,24 @@
          @media screen and (max-width: 1123px) {
             font-size: 4rem;
          }
+
+         @media screen and (max-width: 754px) {
+            font-size: 3.5rem;
+         }
+
+         @media screen and (max-width: 650px) {
+            font-size: 3rem;
+         }
+
+         @media screen and (max-width: 558px) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            margin-bottom: 2rem;
+         }
+
+         @media screen and (max-width: 355px) {
+            font-size: 1.75rem;
+         }
       }
 
       p {

@@ -12,8 +12,8 @@ const App = () => {
             <Intro />
             <Statistics />
             <Boost />
-            <Footer />
          </main>
+         <Footer />
       </>
    );
 };
