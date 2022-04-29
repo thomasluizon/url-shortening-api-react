@@ -31,9 +31,7 @@ const Header = () => {
             </nav>
             <div className="header__mobile-login">
                <a href="#">Login</a>
-               <button className="btn" href="#">
-                  Sign Up
-               </button>
+               <button className="btn">Sign Up</button>
             </div>
          </div>
       );

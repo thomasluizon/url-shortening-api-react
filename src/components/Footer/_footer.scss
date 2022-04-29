@@ -19,7 +19,7 @@
          align-items: flex-start;
          gap: 2rem;
 
-         h3,
+         .diff,
          a {
             color: white;
             font-size: 15.5px;
@@ -33,7 +33,7 @@
             }
          }
 
-         h3 {
+         .diff {
             margin-bottom: 15px;
             font-weight: bold;
          }

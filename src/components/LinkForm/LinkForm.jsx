@@ -40,8 +40,6 @@ const LinkForm = () => {
 
                   setLinks(prevState => [linkObject, ...prevState]);
                   setLoading(false);
-               } else {
-                  alert('Link has already been shortened!');
                }
             });
       } catch (e) {

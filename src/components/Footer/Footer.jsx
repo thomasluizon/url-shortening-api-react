@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
             <div className="footer__lists">
                <ul data-aos="fade-up" data-aos-delay="100">
-                  <h3>Features</h3>
+                  <li className="diff">Features</li>
 
                   <li>
                      <a href="#">Link Shortening</a>
@@ -31,7 +31,7 @@ const Footer = () => {
                   </li>
                </ul>
                <ul data-aos="fade-up" data-aos-delay="150">
-                  <h3>Resources</h3>
+                  <li className="diff">Resources</li>
 
                   <li>
                      <a href="#">Blog</a>
@@ -44,7 +44,7 @@ const Footer = () => {
                   </li>
                </ul>
                <ul data-aos="fade-up" data-aos-delay="200">
-                  <h3>Company</h3>
+                  <li className="diff">Company</li>
 
                   <li>
                      <a href="#">About</a>
