@@ -66,9 +66,7 @@ const Header = () => {
             </div>
             <div className="header__login-wrapper">
                <a href="#">Login</a>
-               <button className="btn" href="#">
-                  Sign Up
-               </button>
+               <button className="btn">Sign Up</button>
             </div>
             <Burger />
             {mobile && <MobileNav />}
