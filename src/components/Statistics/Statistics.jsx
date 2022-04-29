@@ -1,4 +1,7 @@
 import LinkForm from '../LinkForm/LinkForm';
+import brandReco from '../../assets/imgs/icon-brand-recognition.svg';
+import detailedReco from '../../assets/imgs/icon-detailed-records.svg';
+import fullyCustom from '../../assets/imgs/icon-fully-customizable.svg';
 
 const Statistics = () => {
    return (
@@ -18,10 +21,7 @@ const Statistics = () => {
                <div className="statistics__cards">
                   <div className="card" data-aos="fade-up">
                      <div className="card__img">
-                        <img
-                           src="src/assets/imgs/icon-brand-recognition.svg"
-                           alt=""
-                        />
+                        <img src={brandReco} alt="" />
                      </div>
                      <h3>Brand Recognition</h3>
                      <p>
@@ -36,10 +36,7 @@ const Statistics = () => {
                      data-aos-delay="50"
                   >
                      <div className="card__img">
-                        <img
-                           src="src/assets/imgs/icon-detailed-records.svg"
-                           alt=""
-                        />
+                        <img src={detailedReco} alt="" />
                      </div>
                      <h3>Detailed Records</h3>
                      <p>
@@ -54,10 +51,7 @@ const Statistics = () => {
                      data-aos-delay="100"
                   >
                      <div className="card__img">
-                        <img
-                           src="src/assets/imgs/icon-fully-customizable.svg"
-                           alt=""
-                        />
+                        <img src={fullyCustom} alt="" />
                      </div>
                      <h3>Fully Customizable</h3>
                      <p>

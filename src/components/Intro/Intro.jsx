@@ -1,3 +1,5 @@
+import illustration from '../../assets/imgs/illustration-working.svg';
+
 const Intro = () => {
    return (
       <section id="intro">
@@ -12,10 +14,7 @@ const Intro = () => {
             </button>
          </div>
          <div className="intro__img" data-aos-delay="100" data-aos="fade-left">
-            <img
-               src="src/assets/imgs/illustration-working.svg"
-               alt="A person using a computer"
-            />
+            <img src={illustration} alt="A person using a computer" />
          </div>
       </section>
    );

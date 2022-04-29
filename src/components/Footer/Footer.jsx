@@ -1,3 +1,8 @@
+import facebook from '../../assets/imgs/icon-facebook.svg';
+import twitter from '../../assets/imgs/icon-twitter.svg';
+import pinterest from '../../assets/imgs/icon-pinterest.svg';
+import instagram from '../../assets/imgs/icon-instagram.svg';
+
 const Footer = () => {
    return (
       <footer id="footer">
@@ -60,19 +65,10 @@ const Footer = () => {
                data-aos="fade-up"
                data-aos-delay="250"
             >
-               <img
-                  src="src/assets/imgs/icon-facebook.svg"
-                  alt="Facebook logo"
-               />
-               <img src="src/assets/imgs/icon-twitter.svg" alt="Twitter logo" />
-               <img
-                  src="src/assets/imgs/icon-pinterest.svg"
-                  alt="Pinterest logo"
-               />
-               <img
-                  src="src/assets/imgs/icon-instagram.svg"
-                  alt="Instagram logo"
-               />
+               <img src={facebook} alt="Facebook logo" />
+               <img src={twitter} alt="Twitter logo" />
+               <img src={pinterest} alt="Pinterest logo" />
+               <img src={instagram} alt="Instagram logo" />
             </div>
          </div>
       </footer>
