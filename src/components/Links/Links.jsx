@@ -1,7 +1,11 @@
 const Links = props => {
    const copyLink = link => {
-      navigator.clipboard.writeText(link);
-      alert('Link copied to clipboard!');
+      try {
+         navigator.clipboard.writeText(link);
+         alert('Link copied to clipboard!');
+      } catch (e) {
+         alert('Error: browser not supported.');
+      }
    };
 
    return (
