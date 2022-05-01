@@ -22,6 +22,7 @@ const LinkForm = () => {
       setFormError(false);
 
       try {
+         setLoading(true);
          await fetch(`https://api.shrtco.de/v2/shorten?url=${inputValue}`)
             .then(res => res.json())
             .then(res => {
@@ -29,13 +30,12 @@ const LinkForm = () => {
                setInputValue('');
                const hasLink = links.some(link => link.longLink == longLink);
                if (!hasLink) {
-                  setLoading(true);
-
                   const shortLink = res.result.short_link;
                   const linkObject = {
                      id: links.length + 1,
                      shortLink,
                      longLink,
+                     isCopied: false,
                   };
 
                   setLinks(prevState => [linkObject, ...prevState]);
@@ -67,7 +67,7 @@ const LinkForm = () => {
             </button>
             {formError && <p className="error-text">Please add a link</p>}
          </form>
-         <Links links={links} />
+         <Links links={links} setLinks={setLinks} />
       </div>
    );
 };
