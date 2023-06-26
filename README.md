@@ -1,4 +1,6 @@
-## URL shortening website
+# URL shortening website
+
+![GitHub](https://img.shields.io/github/license/thomasluizon/url-shortening-api-react)
 
 Made with HTML, CSS, Sass, JavaScript and React
 
